@@ -1335,5 +1335,173 @@
             });
         });
     </script>
+
+    <!-- 
+=================================================================
+OPAL X - Cal.com Integration Guide
+=================================================================
+Add this script before the closing </body> tag on ALL pages:
+index.html, services.html, pricing.html, and any other pages
+=================================================================
+-->
+
+<!-- Cal.com Embed Script -->
+<script>
+(function (C, A, L) {
+    let p = function (a, ar) {
+        a.q.push(ar);
+    };
+    let d = C.document;
+    C.Cal = C.Cal || function () {
+        let cal = C.Cal;
+        let ar = arguments;
+        if (!cal.loaded) {
+            cal.ns = {};
+            cal.q = cal.q || [];
+            d.head.appendChild(d.createElement("script")).src = A;
+            cal.loaded = true;
+        }
+        if (ar[0] === L) {
+            const api = function () {
+                p(api, arguments);
+            };
+            const namespace = ar[1];
+            api.q = api.q || [];
+            typeof namespace === "string" ? (cal.ns[namespace] = api) && p(api, ar) : p(cal, ar);
+            return;
+        }
+        p(cal, ar);
+    };
+})(window, "https://app.cal.com/embed/embed.js", "init");
+
+// Initialize Cal.com
+Cal("init", {origin:"https://app.cal.com"});
+
+// Function to open booking popup
+function openBooking() {
+    Cal("ui", {
+        calLink: "cal_live_5e90bd90ff37934ee284177858ebd35f",
+        config: {
+            theme: "dark"
+        }
+    });
+}
+
+// Auto-attach to all booking buttons on page load
+document.addEventListener('DOMContentLoaded', function() {
+    // Find all elements that should trigger booking
+    const bookingSelectors = [
+        '.btn-cta',
+        '.hero-cta',
+        '.book-btn',
+        '.pricing-cta',
+        '.btn-plan',
+        'button:contains("Book")',
+        'a:contains("Book")'
+    ];
+    
+    // Get all buttons and links that contain "book" (case-insensitive)
+    const allElements = document.querySelectorAll('button, a');
+    
+    allElements.forEach(element => {
+        const text = element.textContent.toLowerCase();
+        if (text.includes('book') || 
+            text.includes('call') || 
+            text.includes('strategy') ||
+            element.classList.contains('btn-cta') ||
+            element.classList.contains('hero-cta') ||
+            element.classList.contains('book-btn') ||
+            element.classList.contains('pricing-cta')) {
+            
+            element.style.cursor = 'pointer';
+            
+            // Remove any existing href to prevent navigation
+            if (element.tagName === 'A') {
+                element.removeAttribute('href');
+                element.setAttribute('href', 'javascript:void(0)');
+            }
+            
+            // Add click handler
+            element.addEventListener('click', function(e) {
+                e.preventDefault();
+                openBooking();
+            });
+        }
+    });
+    
+    console.log('✅ Cal.com integration active - All booking buttons configured');
+});
+
+// Handle booking confirmation
+window.addEventListener('message', function(e) {
+    if (e.data.type === 'CAL:BOOKING_CONFIRMED') {
+        console.log('🎉 Booking confirmed!', e.data);
+        // Optional: Add your custom tracking or redirect logic here
+        // Example: gtag('event', 'booking_confirmed', { ... });
+    }
+});
+</script>
+
+<!-- 
+=================================================================
+IMPLEMENTATION INSTRUCTIONS:
+=================================================================
+
+1. COPY the entire script above (from <script> to </script>)
+
+2. PASTE it before the closing </body> tag in these files:
+   - index.html
+   - services.html  
+   - pricing.html
+   - Any other pages with booking buttons
+
+3. The script will automatically:
+   ✓ Find ALL buttons/links with "book", "call", or "strategy" text
+   ✓ Find elements with classes: btn-cta, hero-cta, book-btn, pricing-cta
+   ✓ Convert them to open the Cal.com booking popup
+   ✓ Show dark theme matching your design
+   ✓ Track booking confirmations
+
+4. NO OTHER CHANGES NEEDED to your existing HTML!
+   All your existing buttons will work automatically.
+
+5. Test it by clicking any "Book a call" button on your site
+
+=================================================================
+TROUBLESHOOTING:
+=================================================================
+
+If buttons don't open the calendar:
+1. Check browser console (F12) for errors
+2. Verify the script is added before </body> tag
+3. Make sure buttons have "book", "call", or "strategy" in their text
+4. Clear browser cache and reload
+
+For custom buttons not detected automatically, add this attribute:
+onclick="openBooking()"
+
+Example:
+<button onclick="openBooking()">Custom Button</button>
+
+=================================================================
+-->
+
+<!-- Optional: Custom CSS for Cal.com Modal -->
+<style>
+    /* Cal.com popup overlay styling */
+    [data-cal-namespace] {
+        z-index: 10000 !important;
+    }
+    
+    /* Make sure popup is above everything */
+    body:has([data-cal-namespace]) {
+        overflow: hidden;
+    }
+    
+    /* Custom popup styling if needed */
+    .cal-embed {
+        border-radius: 20px !important;
+    }
+</style>
 </body>
 </html>

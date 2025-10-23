@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OPAL X - Functional Websites That Monetise | Australia</title>
+    
+    <!-- Favicon Fix -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>O</text></svg>" />
+    
     <style>
         * {
             margin: 0;
@@ -188,7 +192,7 @@
             align-items: center;
             gap: 0.8rem;
             padding: 1.2rem 2.5rem;
-            background: var(--black);
+            background: var(--orange);
             color: var(--white);
             border-radius: 50px;
             font-weight: 600;
@@ -196,6 +200,7 @@
             text-decoration: none;
             transition: all 0.3s ease;
             box-shadow: 0 10px 40px rgba(255, 77, 61, 0.3);
+            cursor: pointer;
         }
 
         .hero-cta:hover {
@@ -536,6 +541,30 @@
             color: var(--white);
         }
 
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: var(--grey);
+            border-radius: 50%;
+            color: var(--light-grey);
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background: var(--teal);
+            color: var(--black);
+            transform: translateY(-3px);
+        }
+
         .footer-bottom {
             text-align: center;
             padding-top: 2rem;
@@ -549,6 +578,7 @@
             display: none;
             font-size: 1.5rem;
             cursor: pointer;
+            color: var(--white);
         }
 
         @media (max-width: 968px) {
@@ -647,7 +677,7 @@
             <div class="feature-item">Dedicated Project Manager</div>
             <div class="feature-item">Pause or Cancel Anytime</div>
         </div>
-        <a href="#contact" class="hero-cta">
+        <a class="hero-cta">
             <div class="avatar"></div>
             Book a call with Mohamed
         </a>
@@ -769,7 +799,7 @@
     <section class="cta-section" id="contact">
         <h2>Ready to monetise your website?</h2>
         <p>Book a 20-minute strategy call and discover how we can transform your online presence into a revenue machine.</p>
-        <a href="#" class="hero-cta">
+        <a class="hero-cta">
             <div class="avatar"></div>
             Book your strategy call now
         </a>
@@ -777,79 +807,78 @@
 
     <!-- Footer -->
     <footer>
-    <div class="footer-content">
-        <!-- Logo and Description -->
-        <div class="footer-section">
-            <div class="logo" onclick="window.location.href='index.html'">OPAL X</div>
-            <p style="color: var(--light-grey); line-height: 1.8;">
-                Functional websites that monetise. Built for Australian businesses with offices in Sydney & Sri Lanka.
-            </p>
+        <div class="footer-content">
+            <!-- Logo and Description -->
+            <div class="footer-section">
+                <div class="logo" onclick="window.location.href='index.html'" style="-webkit-text-fill-color: white; cursor: pointer;">OPAL X</div>
+                <p style="color: var(--light-grey); line-height: 1.8; margin-top: 1rem;">
+                    Functional websites that monetise. Built for Australian businesses with offices in Sydney & Sri Lanka.
+                </p>
 
-            <!-- Social Links -->
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/opal-x-0548bb38b/" target="_blank" rel="noopener" aria-label="LinkedIn">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
-                        <path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.5 8h4V24h-4V8zm7.5 0h3.8v2.2h.1c.5-.9 1.8-2.2 4-2.2 4.3 0 5.1 2.8 5.1 6.4V24h-4v-7.8c0-1.8 0-4.1-2.5-4.1-2.5 0-2.9 1.9-2.9 3.9V24h-4V8z"/>
-                    </svg>
-                </a>
-                <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Twitter">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1227" fill="currentColor" width="20" height="20">
-                        <path d="M714.163 519.284L1160.89 0H1055.03L667.137 450.887L357.328 0H0L468.492 681.821L0 1226.37H105.866L515.519 746.218L842.672 1226.37H1200L714.137 519.284H714.163ZM562.457 681.847L521.337 622.129L144.011 79.6945H306.615L610.412 518.841L651.532 578.559L1055.07 1151.83H892.467L562.457 681.874V681.847Z"/>
-                    </svg>
-                </a>
-                <a href="https://www.instagram.com/opalxaus/" target="_blank" rel="noopener" aria-label="Instagram">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
-                        <path d="M7.75 2A5.75 5.75 0 0 0 2 7.75v8.5A5.75 5.75 0 0 0 7.75 22h8.5A5.75 5.75 0 0 0 22 16.25v-8.5A5.75 5.75 0 0 0 16.25 2h-8.5zM12 7a5 5 0 1 1 0 10a5 5 0 0 1 0-10zm6.5-.75a1.25 1.25 0 1 1 0 2.5a1.25 1.25 0 0 1 0-2.5zM12 9.5A2.5 2.5 0 1 0 12 14a2.5 2.5 0 0 0 0-4.5z"/>
-                    </svg>
-                </a>
-                <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
-                        <path d="M22 12a10 10 0 1 0-11.6 9.9v-7h-2v-2.9h2V9.8c0-2 1.2-3.1 3-3.1.9 0 1.9.1 2.3.1v2.6h-1.3c-1 0-1.3.6-1.3 1.2v1.5h2.6l-.4 2.9h-2.2v7A10 10 0 0 0 22 12Z"/>
-                    </svg>
-                </a>
+                <!-- Social Links -->
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/opal-x-0548bb38b/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                            <path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.5 8h4V24h-4V8zm7.5 0h3.8v2.2h.1c.5-.9 1.8-2.2 4-2.2 4.3 0 5.1 2.8 5.1 6.4V24h-4v-7.8c0-1.8 0-4.1-2.5-4.1-2.5 0-2.9 1.9-2.9 3.9V24h-4V8z"/>
+                        </svg>
+                    </a>
+                    <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Twitter">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1227" fill="currentColor" width="20" height="20">
+                            <path d="M714.163 519.284L1160.89 0H1055.03L667.137 450.887L357.328 0H0L468.492 681.821L0 1226.37H105.866L515.519 746.218L842.672 1226.37H1200L714.137 519.284H714.163ZM562.457 681.847L521.337 622.129L144.011 79.6945H306.615L610.412 518.841L651.532 578.559L1055.07 1151.83H892.467L562.457 681.874V681.847Z"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.instagram.com/opalxaus/" target="_blank" rel="noopener" aria-label="Instagram">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                            <path d="M7.75 2A5.75 5.75 0 0 0 2 7.75v8.5A5.75 5.75 0 0 0 7.75 22h8.5A5.75 5.75 0 0 0 22 16.25v-8.5A5.75 5.75 0 0 0 16.25 2h-8.5zM12 7a5 5 0 1 1 0 10a5 5 0 0 1 0-10zm6.5-.75a1.25 1.25 0 1 1 0 2.5a1.25 1.25 0 0 1 0-2.5zM12 9.5A2.5 2.5 0 1 0 12 14a2.5 2.5 0 0 0 0-4.5z"/>
+                        </svg>
+                    </a>
+                    <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                            <path d="M22 12a10 10 0 1 0-11.6 9.9v-7h-2v-2.9h2V9.8c0-2 1.2-3.1 3-3.1.9 0 1.9.1 2.3.1v2.6h-1.3c-1 0-1.3.6-1.3 1.2v1.5h2.6l-.4 2.9h-2.2v7A10 10 0 0 0 22 12Z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Services -->
+            <div class="footer-section">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="services.html">Web Design & Development</a></li>
+                    <li><a href="services.html">Custom Software</a></li>
+                    <li><a href="services.html">SEO & Marketing</a></li>
+                    <li><a href="services.html">E-Commerce Solutions</a></li>
+                    <li><a href="services.html">Care Plans</a></li>
+                </ul>
+            </div>
+
+            <!-- Company -->
+            <div class="footer-section">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="case-studies.html">Case Studies</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="careers.html">Careers</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact -->
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <ul>
+                    <li><a href="tel:+61212345678">+61 2 1234 5678</a></li>
+                    <li><a href="mailto:opalxaus@gmail.com">opalxaus@gmail.com</a></li>
+                    <li><p style="margin-top: 1rem; color: var(--light-grey);">Sydney, Australia<br>Mon-Fri: 9am - 6pm AEST</p></li>
+                </ul>
             </div>
         </div>
 
-        <!-- Services -->
-        <div class="footer-section">
-            <h4>Services</h4>
-            <ul>
-                <li><a href="services.html">Web Design & Development</a></li>
-                <li><a href="services.html">Custom Software</a></li>
-                <li><a href="services.html">SEO & Marketing</a></li>
-                <li><a href="services.html">E-Commerce Solutions</a></li>
-                <li><a href="services.html">Care Plans</a></li>
-            </ul>
+        <div class="footer-bottom">
+            <p>© 2025 OPAL X. All rights reserved. | ABN: [Your ABN]</p>
         </div>
-
-        <!-- Company -->
-        <div class="footer-section">
-            <h4>Company</h4>
-            <ul>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="case-studies.html">Case Studies</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="careers.html">Careers</a></li>
-            </ul>
-        </div>
-
-        <!-- Contact -->
-        <div class="footer-section">
-            <h4>Contact</h4>
-            <ul>
-                <li><a href="tel:+61212345678">+61 2 1234 5678</a></li>
-                <li><a href="mailto:opalxaus@gmail.com">opalxaus@gmail.com</a></li>
-                <li><p style="margin-top: 1rem;">Sydney, Australia<br>Mon-Fri: 9am - 6pm AEST</p></li>
-            </ul>
-        </div>
-    </div>
-
-    <div class="footer-bottom">
-        <p>© 2025 OPAL X. All rights reserved. | ABN: [Your ABN]</p>
-    </div>
-</footer>
-
+    </footer>
 
     <script>
         // Animated Counter for Stats
@@ -978,13 +1007,27 @@
             updateSlider();
         }, 5000);
 
-        // Smooth scroll
+        // Smooth scroll - FIXED VERSION
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                const href = this.getAttribute('href');
+                
+                // Skip if href is just # or javascript:void(0) or similar
+                if (!href || href === '#' || href.startsWith('javascript:')) {
+                    e.preventDefault();
+                    return;
+                }
+                
+                // Try to find the target element
+                try {
+                    const target = document.querySelector(href);
+                    if (target) {
+                        e.preventDefault();
+                        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                } catch (error) {
+                    // Invalid selector, just prevent default
+                    e.preventDefault();
                 }
             });
         });
@@ -1021,5 +1064,311 @@
             observer.observe(el);
         });
     </script>
+<script>
+// Load Cal.com embed library
+(function (C, A, L) {
+    let p = function (a, ar) {
+        a.q.push(ar);
+    };
+    let d = C.document;
+    C.Cal = C.Cal || function () {
+        let cal = C.Cal;
+        let ar = arguments;
+        if (!cal.loaded) {
+            cal.ns = {};
+            cal.q = cal.q || [];
+            d.head.appendChild(d.createElement("script")).src = A;
+            cal.loaded = true;
+        }
+        if (ar[0] === L) {
+            const api = function () {
+                p(api, arguments);
+            };
+            const namespace = ar[1];
+            api.q = api.q || [];
+            typeof namespace === "string" ? (cal.ns[namespace] = api) && p(api, ar) : p(cal, ar);
+            return;
+        }
+        p(cal, ar);
+    };
+})(window, "https://app.cal.com/embed/embed.js", "init");
+
+// Wait for Cal.com to be ready
+let calReady = false;
+let calCheckInterval = setInterval(function() {
+    if (typeof Cal !== 'undefined') {
+        Cal("init", {origin:"https://app.cal.com"});
+        calReady = true;
+        clearInterval(calCheckInterval);
+        console.log('✅ Cal.com is ready');
+    }
+}, 100);
+
+// Function to open Cal.com booking popup
+function openBooking(planName, planType) {
+    console.log('📅 Opening booking calendar...');
+    
+    if (!calReady) {
+        console.log('⏳ Waiting for Cal.com to load...');
+        setTimeout(function() {
+            openBooking(planName, planType);
+        }, 500);
+        return;
+    }
+    
+    try {
+        // Configuration for the booking popup
+        const config = {
+            theme: "dark",
+            layout: "month_view"
+        };
+        
+        // Add plan information to booking notes if applicable
+        if (planName) {
+            config.notes = `Interested in: ${planName}${planType ? ` (${planType})` : ''}`;
+        }
+        
+        // Open the Cal.com booking interface
+        Cal("ui", {
+            calLink: "cal_live_5e90bd90ff37934ee284177858ebd35f",
+            config: config
+        });
+        
+        console.log('✅ Cal.com booking interface opened');
+    } catch (error) {
+        console.error('❌ Error opening booking:', error);
+        
+        // Fallback: Open in new window
+        const url = 'https://cal.com/cal_live_5e90bd90ff37934ee284177858ebd35f';
+        window.open(url, '_blank', 'width=800,height=800');
+    }
+}
+
+// Make function globally available
+window.openBooking = openBooking;
+
+// Track booking events
+window.addEventListener('message', function(event) {
+    const data = event.data;
+    
+    // When user successfully books an appointment
+    if (data.type === 'CAL:BOOKING_CONFIRMED') {
+        console.log('🎉 Booking confirmed!', data);
+        
+        // Show success message to user
+        showBookingConfirmation(data);
+        
+        // Optional: Send to your analytics
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'booking_confirmed', {
+                event_category: 'Conversion',
+                event_label: 'Cal.com Booking Completed'
+            });
+        }
+        
+        // Optional: Send to Facebook Pixel
+        if (typeof fbq !== 'undefined') {
+            fbq('track', 'Schedule');
+        }
+    }
+    
+    // When user starts booking process
+    if (data.type === 'CAL:BOOKING_STARTED') {
+        console.log('📝 User started booking process');
+    }
+    
+    // When booking modal is closed
+    if (data.type === 'CAL:MODAL_CLOSED') {
+        console.log('❌ Booking modal closed');
+    }
+});
+
+// Show success confirmation to user
+function showBookingConfirmation(bookingData) {
+    // Create custom confirmation overlay
+    const overlay = document.createElement('div');
+    overlay.style.cssText = `
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.9);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 99999;
+        animation: fadeIn 0.3s ease;
+    `;
+    
+    const confirmBox = document.createElement('div');
+    confirmBox.style.cssText = `
+        background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+        padding: 3rem;
+        border-radius: 20px;
+        max-width: 500px;
+        text-align: center;
+        border: 1px solid #00d9c0;
+        box-shadow: 0 20px 60px rgba(0, 217, 192, 0.3);
+        animation: slideUp 0.4s ease;
+    `;
+    
+    confirmBox.innerHTML = `
+        <div style="font-size: 4rem; margin-bottom: 1rem;">✅</div>
+        <h2 style="color: #00d9c0; font-size: 2rem; margin-bottom: 1rem; font-weight: 700;">Booking Confirmed!</h2>
+        <p style="color: #999; font-size: 1.1rem; line-height: 1.6; margin-bottom: 2rem;">
+            Your strategy call has been successfully scheduled. You'll receive a confirmation email with all the details shortly.
+        </p>
+        <button onclick="this.parentElement.parentElement.remove()" style="
+            background: #00d9c0;
+            color: #000;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        " onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
+            Great! Close
+        </button>
+    `;
+    
+    overlay.appendChild(confirmBox);
+    document.body.appendChild(overlay);
+    
+    // Auto-close after 10 seconds
+    setTimeout(function() {
+        overlay.style.animation = 'fadeOut 0.3s ease';
+        setTimeout(function() {
+            if (overlay.parentElement) {
+                overlay.remove();
+            }
+        }, 300);
+    }, 10000);
+}
+
+// Attach booking buttons when page loads
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('🚀 Setting up booking buttons...');
+    
+    // Wait a bit for Cal.com to initialize
+    setTimeout(function() {
+        // Find all booking-related buttons
+        const allElements = document.querySelectorAll('button, a');
+        let buttonCount = 0;
+        
+        allElements.forEach(function(element) {
+            const text = element.textContent.toLowerCase();
+            const isBookingButton = 
+                text.includes('book') || 
+                text.includes('call') || 
+                text.includes('strategy') ||
+                text.includes('schedule') ||
+                text.includes('appointment') ||
+                element.classList.contains('btn-cta') ||
+                element.classList.contains('hero-cta') ||
+                element.classList.contains('book-btn') ||
+                element.classList.contains('pricing-cta') ||
+                element.classList.contains('btn-plan');
+            
+            if (isBookingButton) {
+                // Remove old click handlers by cloning
+                const newElement = element.cloneNode(true);
+                element.parentNode.replaceChild(newElement, element);
+                
+                // Add new click handler
+                newElement.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    
+                    console.log('🔵 Booking button clicked:', this.textContent.trim());
+                    
+                    // Get plan info if on pricing page
+                    const planCard = this.closest('.pricing-card');
+                    let planName = null;
+                    let planType = null;
+                    
+                    if (planCard) {
+                        const titleElement = planCard.querySelector('.plan-title');
+                        const typeElement = planCard.querySelector('.plan-name');
+                        if (titleElement) planName = titleElement.textContent.trim();
+                        if (typeElement) planType = typeElement.textContent.trim();
+                    }
+                    
+                    // Open booking calendar
+                    openBooking(planName, planType);
+                });
+                
+                buttonCount++;
+                console.log(`  ✓ ${newElement.textContent.trim().substring(0, 40)}...`);
+            }
+        });
+        
+        console.log(`✅ ${buttonCount} booking buttons configured`);
+    }, 1000);
+});
+
+// Add CSS animations
+const style = document.createElement('style');
+style.textContent = `
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+    
+    @keyframes fadeOut {
+        from { opacity: 1; }
+        to { opacity: 0; }
+    }
+    
+    @keyframes slideUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+`;
+document.head.appendChild(style);
+</script>
+
+<!-- Cal.com Modal Styling -->
+<style>
+    /* Ensure Cal.com modal appears above everything */
+    [data-cal-namespace] {
+        z-index: 10000 !important;
+    }
+    
+    /* Lock body scroll when modal is open */
+    body:has([data-cal-namespace]) {
+        overflow: hidden !important;
+    }
+    
+    /* Style the Cal.com iframe container */
+    div[data-cal-namespace] {
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100vw !important;
+        height: 100vh !important;
+        z-index: 10000 !important;
+        background: rgba(0, 0, 0, 0.8) !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+    
+    /* Style the Cal.com iframe */
+    div[data-cal-namespace] iframe {
+        border-radius: 20px !important;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5) !important;
+        max-width: 95vw !important;
+        max-height: 95vh !important;
+    }
+</style>
 </body>
 </html>
