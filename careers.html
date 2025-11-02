@@ -1,321 +1,918 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Careers - Join the OpalX Team | Sydney</title>
-    <meta name="description" content="Interested in a career at OpalX? We're looking for passionate tech talent to join our growing team in Sydney.">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
-    <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_GA_ID"></script>
+    <meta
+      name="description"
+      content="Interested in a career at OpalX? We're looking for passionate tech talent to join our growing team in Sydney."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=YOUR_GA_ID"
+    ></script>
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'YOUR_GA_ID');
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "YOUR_GA_ID");
     </script>
-    
+
     <script type="text/javascript">
-      (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if (typeof namespace === "string") { cal.ns[namespace] = api; p(api, ar); } else p(cal, ar); return; } p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
-      Cal("init", {origin:"https://app.cal.com"});
-      Cal("ui", {theme:"light",styles:{branding:{brandColor:"#4F46E5"}},hideEventTypeDetails:false});
+      (function (C, A, L) {
+        let p = function (a, ar) {
+          a.q.push(ar);
+        };
+        let d = C.document;
+        C.Cal =
+          C.Cal ||
+          function () {
+            let cal = C.Cal;
+            let ar = arguments;
+            if (!cal.loaded) {
+              cal.ns = {};
+              cal.q = cal.q || [];
+              d.head.appendChild(d.createElement("script")).src = A;
+              cal.loaded = true;
+            }
+            if (ar[0] === L) {
+              const api = function () {
+                p(api, arguments);
+              };
+              const namespace = ar[1];
+              api.q = api.q || [];
+              if (typeof namespace === "string") {
+                cal.ns[namespace] = cal.ns[namespace] || api;
+                p(cal.ns[namespace], ar);
+                p(cal, ["initNamespace", namespace]);
+              } else p(cal, ar);
+              return;
+            }
+            p(cal, ar);
+          };
+      })(window, "https://app.cal.com/embed/embed.js", "init");
+      Cal("init", "30min", { origin: "https://app.cal.com" });
+      Cal.ns["30min"]("ui", {
+        hideEventTypeDetails: false,
+        layout: "month_view",
+      });
     </script>
-    
+
     <style>
-        :root {
-            --primary: #4F46E5; --primary-light: #6366F1; --accent: #06B6D4; --dark: #0F172A; --gray-900: #1E293B; --gray-700: #475569; --gray-600: #64748B; --gray-500: #94A3B8; --gray-400: #CBD5E1; --gray-300: #E2E8F0; --gray-200: #F1F5F9; --gray-100: #F8FAFC; --white: #FFFFFF; --font-primary: 'Inter', sans-serif; --section-padding: 120px; --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
-        body { font-family: var(--font-primary); background: var(--white); color: var(--dark); line-height: 1.7; -webkit-font-smoothing: antialiased; }
-        
-        /* Navigation */
-        .navbar { position: fixed; top: 0; left: 0; right: 0; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); border-bottom: 1px solid var(--gray-200); z-index: 1000; transition: var(--transition); }
-        .navbar.scrolled { box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05); }
-        .nav-container { max-width: 1400px; margin: 0 auto; padding: 24px 60px; display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-size: 28px; font-weight: 700; color: var(--dark); letter-spacing: -0.5px; text-decoration: none; }
-        .nav-links { display: flex; gap: 48px; list-style: none; align-items: center; }
-        .nav-links a { color: var(--gray-700); text-decoration: none; font-size: 15px; font-weight: 500; transition: var(--transition); }
-        .nav-links a:hover { color: var(--primary); }
-        .cta-nav { background: var(--primary); color: var(--white); padding: 12px 28px; border-radius: 8px; font-weight: 600; border: none; cursor: pointer; transition: var(--transition); font-size: 15px; }
-        .cta-nav:hover { background: var(--primary-light); transform: translateY(-2px); box-shadow: 0 10px 25px rgba(79, 70, 229, 0.25); }
-        
-        /* Page Hero */
-        .page-hero { padding: 180px 60px 100px; background: var(--gray-100); text-align: center; }
-        .page-hero h1 { font-size: 64px; font-weight: 700; color: var(--dark); margin-bottom: 24px; letter-spacing: -2px; }
-        .page-hero p { font-size: 20px; color: var(--gray-600); max-width: 700px; margin: 0 auto; line-height: 1.8; }
-        
-        /* Careers Content */
-        .careers-section {
-            padding: var(--section-padding) 60px;
-            max-width: 900px;
-            margin: 0 auto;
-        }
-        .careers-section h2 {
-            font-size: 42px;
-            font-weight: 700;
-            color: var(--dark);
-            margin-bottom: 24px;
-            letter-spacing: -1px;
-            text-align: center;
-        }
-        .careers-section p {
-            font-size: 18px;
-            color: var(--gray-600);
-            line-height: 1.8;
-            margin-bottom: 32px;
-            text-align: center;
+      :root {
+        --primary: #4f46e5;
+        --primary-light: #6366f1;
+        --accent: #06b6d4;
+        --dark: #0f172a;
+        --gray-900: #1e293b;
+        --gray-700: #475569;
+        --gray-600: #64748b;
+        --gray-500: #94a3b8;
+        --gray-400: #cbd5e1;
+        --gray-300: #e2e8f0;
+        --gray-200: #f1f5f9;
+        --gray-100: #f8fafc;
+        --white: #ffffff;
+        --font-primary: "Inter", sans-serif;
+        --section-padding: 120px;
+        --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: var(--font-primary);
+        background: var(--white);
+        color: var(--dark);
+        line-height: 1.7;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      /* Navigation */
+      .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid var(--gray-200);
+        z-index: 1000;
+        transition: var(--transition);
+      }
+      .navbar.scrolled {
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      }
+      .nav-container {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 24px 60px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .logo {
+        font-size: 28px;
+        font-weight: 700;
+        color: var(--dark);
+        letter-spacing: -0.5px;
+        text-decoration: none;
+      }
+      .nav-links {
+        display: flex;
+        gap: 48px;
+        list-style: none;
+        align-items: center;
+      }
+      .nav-links a {
+        color: var(--gray-700);
+        text-decoration: none;
+        font-size: 15px;
+        font-weight: 500;
+        transition: var(--transition);
+      }
+      .nav-links a:hover {
+        color: var(--primary);
+      }
+      .cta-nav {
+        background: var(--primary);
+        color: var(--white);
+        padding: 12px 28px;
+        border-radius: 8px;
+        font-weight: 600;
+        border: none;
+        cursor: pointer;
+        transition: var(--transition);
+        font-size: 15px;
+      }
+      .cta-nav:hover {
+        background: var(--primary-light);
+        transform: translateY(-2px);
+        box-shadow: 0 10px 25px rgba(79, 70, 229, 0.25);
+      }
+
+      /* === ADDED THIS === */
+      .mobile-menu {
+        display: none;
+        flex-direction: column;
+        gap: 6px;
+        cursor: pointer;
+        z-index: 1001; /* Ensure it's above the overlay */
+      }
+
+      .mobile-menu span {
+        width: 24px;
+        height: 2px;
+        background: var(--dark);
+        transition: var(--transition);
+      }
+
+      /* === ADDED THIS === */
+      .cta-mobile {
+        display: none;
+      }
+
+      /* Page Hero */
+      .page-hero {
+        padding: 180px 60px 100px;
+        background: var(--gray-100);
+        text-align: center;
+      }
+      .page-hero h1 {
+        font-size: 64px;
+        font-weight: 700;
+        color: var(--dark);
+        margin-bottom: 24px;
+        letter-spacing: -2px;
+      }
+      .page-hero p {
+        font-size: 20px;
+        color: var(--gray-600);
+        max-width: 700px;
+        margin: 0 auto;
+        line-height: 1.8;
+      }
+
+      /* Careers Content */
+      .careers-section {
+        padding: var(--section-padding) 60px;
+        max-width: 900px;
+        margin: 0 auto;
+      }
+      .careers-section h2 {
+        font-size: 42px;
+        font-weight: 700;
+        color: var(--dark);
+        margin-bottom: 24px;
+        letter-spacing: -1px;
+        text-align: center;
+      }
+      .careers-section p {
+        font-size: 18px;
+        color: var(--gray-600);
+        line-height: 1.8;
+        margin-bottom: 32px;
+        text-align: center;
+      }
+
+      .job-listing {
+        border: 2px solid var(--gray-200);
+        border-radius: 12px;
+        padding: 32px;
+        margin-bottom: 24px;
+        transition: var(--transition);
+      }
+      .job-listing:hover {
+        border-color: var(--primary);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+      }
+      .job-listing h3 {
+        font-size: 24px;
+        font-weight: 600;
+        color: var(--dark);
+        margin-bottom: 8px;
+      }
+      .job-meta {
+        display: flex;
+        gap: 24px;
+        font-size: 15px;
+        color: var(--gray-500);
+        font-weight: 500;
+        margin-bottom: 20px;
+      }
+      .job-description {
+        font-size: 16px;
+        color: var(--gray-600);
+        margin-bottom: 24px;
+      }
+      .btn-primary {
+        background: var(--primary);
+        color: var(--white);
+        padding: 12px 28px;
+        border-radius: 8px;
+        font-weight: 600;
+        font-size: 15px;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        transition: var(--transition);
+        border: none;
+        cursor: pointer;
+      }
+      .btn-primary:hover {
+        background: var(--primary-light);
+        transform: translateY(-3px);
+        box-shadow: 0 12px 30px rgba(79, 70, 229, 0.3);
+      }
+
+      /* --- CSS for Header Logo --- */
+      .nav-container .logo img {
+        height: 64px; /* Adjust this height to fit your navbar */
+        width: auto; /* Maintains aspect ratio */
+        display: block; /* Removes extra space under the image */
+      }
+
+      /* --- CSS for Footer Logo --- */
+      .footer-col .logo img {
+        height: 60px; /* You can set a different height for the footer */
+        width: auto;
+      }
+
+      .nav-socials-item {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        padding-left: 24px;
+        /* This adds a nice subtle separator line */
+        border-left: 1px solid var(--gray-300);
+      }
+
+      .nav-socials-item a {
+        color: var(--gray-500); /* A bit more subtle */
+        display: flex;
+        align-items: center;
+        transition: var(--transition);
+      }
+
+      .nav-socials-item a:hover {
+        color: var(--primary);
+        transform: translateY(-2px);
+      }
+
+      /* --- NEW & IMPROVED MOBILE MENU CSS --- */
+
+      /* 1. Style the hamburger "X" state */
+      .mobile-menu.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+      }
+      .mobile-menu.active span:nth-child(2) {
+        opacity: 0;
+      }
+      .mobile-menu.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
+      }
+
+      /* 2. Main Media Query for Mobile */
+      @media (max-width: 768px) {
+        /* 3. Hide the original desktop CTA button */
+        .cta-desktop {
+          display: none;
         }
 
-        .job-listing {
-            border: 2px solid var(--gray-200);
-            border-radius: 12px;
-            padding: 32px;
-            margin-bottom: 24px;
-            transition: var(--transition);
-        }
-        .job-listing:hover {
-            border-color: var(--primary);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
-        }
-        .job-listing h3 {
-            font-size: 24px;
-            font-weight: 600;
-            color: var(--dark);
-            margin-bottom: 8px;
-        }
-        .job-meta {
-            display: flex;
-            gap: 24px;
-            font-size: 15px;
-            color: var(--gray-500);
-            font-weight: 500;
-            margin-bottom: 20px;
-        }
-        .job-description {
-            font-size: 16px;
-            color: var(--gray-600);
-            margin-bottom: 24px;
-        }
-        .btn-primary {
-            background: var(--primary); color: var(--white); padding: 12px 28px; border-radius: 8px; font-weight: 600; font-size: 15px; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; transition: var(--transition); border: none; cursor: pointer;
-        }
-        .btn-primary:hover {
-            background: var(--primary-light); transform: translateY(-3px); box-shadow: 0 12px 30px rgba(79, 70, 229, 0.3);
+        /* 4. This is the main menu panel */
+        .nav-links {
+          display: flex;
+          flex-direction: column;
+          position: fixed;
+          top: 85px; /* Height of your navbar. (24px*2 padding + ~37px font = 85px) */
+          right: -320px; /* Start off-screen (panel width + 20px) */
+          width: 300px; /* Set a fixed panel width */
+          height: calc(100vh - 85px);
+          background: var(--white);
+          padding: 32px;
+          gap: 0; /* We will control spacing on the <li> */
+          transition: var(--transition);
+          z-index: 999;
+
+          /* This adds the premium "depth" effect */
+          box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
         }
 
-        /* PASTE THIS INSIDE YOUR <style> TAG ON EVERY PAGE */
-
-.nav-socials-item {
-    display: flex;
-    align-items: center;
-    gap: 24px;
-    padding-left: 24px;
-    /* This adds a nice subtle separator line */
-    border-left: 1px solid var(--gray-300);
-}
-
-.nav-socials-item a {
-    color: var(--gray-500); /* A bit more subtle */
-    display: flex;
-    align-items: center;
-    transition: var(--transition);
-}
-
-.nav-socials-item a:hover {
-    color: var(--primary);
-    transform: translateY(-2px);
-}
-
-        /* Footer */
-        footer { background: var(--white); padding: 80px 60px 40px; border-top: 1px solid var(--gray-200); }
-        .footer-container { max-width: 1400px; margin: 0 auto; }
-        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 60px; margin-bottom: 60px; }
-        .footer-col h4 { font-size: 16px; font-weight: 700; color: var(--dark); margin-bottom: 24px; }
-        .footer-col p { font-size: 15px; color: var(--gray-600); line-height: 1.7; margin-bottom: 24px; }
-        .footer-col ul { list-style: none; }
-        .footer-col ul li { margin-bottom: 12px; }
-        .footer-col ul li a { font-size: 15px; color: var(--gray-600); text-decoration: none; transition: var(--transition); }
-        .footer-col ul li a:hover { color: var(--primary); }
-        .social-links { display: flex; gap: 12px; margin-top: 24px; }
-        .social-links a { width: 40px; height: 40px; background: var(--gray-100); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--gray-600); transition: var(--transition); }
-        .social-links a:hover { background: var(--primary); color: var(--white); transform: translateY(-3px); }
-        .footer-bottom { border-top: 1px solid var(--gray-200); padding-top: 32px; display: flex; justify-content: space-between; align-items: center; font-size: 14px; color: var(--gray-500); }
-        .footer-links { display: flex; gap: 24px; }
-        .footer-links a { color: var(--gray-500); text-decoration: none; transition: var(--transition); }
-        .footer-links a:hover { color: var(--primary); }
-        
-        /* Responsive */
-        @media (max-width: 768px) {
-            .nav-links { display: none; }
-            .page-hero { padding: 140px 32px 80px; }
-            .page-hero h1 { font-size: 40px; }
-            .careers-section, footer { padding-left: 32px; padding-right: 32px; }
-            .footer-grid { grid-template-columns: 1fr; gap: 40px; }
-            .footer-bottom { flex-direction: column; gap: 16px; text-align: center; }
+        /* 5. This is the "open" state */
+        .nav-links.active {
+          right: 0; /* Slide in */
         }
+
+        /* 6. Style the individual menu links */
+        .nav-links li {
+          list-style: none;
+          opacity: 0; /* Start hidden for animation */
+          transform: translateX(20px); /* Start slightly to the right */
+          transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+
+        .nav-links li a {
+          font-size: 1.125rem; /* 18px */
+          font-weight: 500;
+          color: var(--dark);
+          padding: 16px 0;
+          display: block;
+          width: 100%;
+          text-decoration: none;
+        }
+
+        .nav-links li a:hover {
+          color: var(--primary);
+        }
+
+        /* 7. This is the animation magic! */
+        .nav-links.active li {
+          opacity: 1;
+          transform: translateX(0);
+        }
+
+        /* 8. Stagger the animation for each link */
+        .nav-links.active li:nth-child(1) {
+          transition-delay: 0.1s;
+        }
+        .nav-links.active li:nth-child(2) {
+          transition-delay: 0.15s;
+        }
+        .nav-links.active li:nth-child(3) {
+          transition-delay: 0.2s;
+        }
+        .nav-links.active li:nth-child(4) {
+          transition-delay: 0.25s;
+        }
+        .nav-links.active li:nth-child(5) {
+          transition-delay: 0.3s;
+        }
+        .nav-links.active li:nth-child(6) {
+          transition-delay: 0.35s;
+        } /* CTA */
+        .nav-links.active li:nth-child(7) {
+          transition-delay: 0.4s;
+        } /* Socials */
+
+        /* 9. Style the new Mobile CTA Button */
+        .cta-mobile {
+          display: block; /* <-- ADDED THIS */
+          margin-top: 24px;
+        }
+        /* This targets the button inside the list item */
+        .cta-mobile .btn-primary {
+          width: 100%;
+          text-align: center;
+          padding: 16px;
+          font-size: 1rem;
+        }
+
+        /* 10. Style the social links at the bottom */
+        .nav-socials-item {
+          padding-left: 0;
+          border-left: none;
+          gap: 24px;
+          margin-top: 24px;
+          padding-top: 24px;
+          border-top: 1px solid var(--gray-200);
+        }
+
+        /* 11. Background Overlay */
+        .menu-overlay {
+          display: none; /* Hidden by default */
+          position: fixed;
+          top: 85px; /* Navbar height */
+          left: 0;
+          width: 100%;
+          height: calc(100vh - 85px);
+          background: rgba(0, 0, 0, 0.5);
+          opacity: 0;
+          transition: opacity 0.3s ease;
+          z-index: 998; /* Just behind the menu */
+        }
+
+        .menu-overlay.active {
+          display: block;
+          opacity: 1;
+        }
+      }
+
+      /* Footer */
+      footer {
+        background: var(--white);
+        padding: 80px 60px 40px;
+        border-top: 1px solid var(--gray-200);
+      }
+      .footer-container {
+        max-width: 1400px;
+        margin: 0 auto;
+      }
+      .footer-grid {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1fr;
+        gap: 60px;
+        margin-bottom: 60px;
+      }
+      .footer-col h4 {
+        font-size: 16px;
+        font-weight: 700;
+        color: var(--dark);
+        margin-bottom: 24px;
+      }
+      .footer-col p {
+        font-size: 15px;
+        color: var(--gray-600);
+        line-height: 1.7;
+        margin-bottom: 24px;
+      }
+      .footer-col ul {
+        list-style: none;
+        padding: 0;
+      }
+      .footer-col ul li {
+        margin-bottom: 12px;
+      }
+      .footer-col ul li a {
+        font-size: 15px;
+        color: var(--gray-600);
+        text-decoration: none;
+        transition: var(--transition);
+      }
+      .footer-col ul li a:hover {
+        color: var(--primary);
+      }
+      .social-links {
+        display: flex;
+        gap: 12px;
+        margin-top: 24px;
+      }
+      .social-links a {
+        width: 40px;
+        height: 40px;
+        background: var(--gray-100);
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--gray-600);
+        transition: var(--transition);
+      }
+      .social-links a:hover {
+        background: var(--primary);
+        color: var(--white);
+        transform: translateY(-3px);
+      }
+      .footer-bottom {
+        border-top: 1px solid var(--gray-200);
+        padding-top: 32px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 14px;
+        color: var(--gray-500);
+      }
+      .footer-links {
+        display: flex;
+        gap: 24px;
+      }
+      .footer-links a {
+        color: var(--gray-500);
+        text-decoration: none;
+        transition: var(--transition);
+      }
+      .footer-links a:hover {
+        color: var(--primary);
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        /* === ADDED THIS === */
+        .mobile-menu {
+          display: flex;
+        }
+        .page-hero {
+          padding: 140px 32px 80px;
+        }
+        .page-hero h1 {
+          font-size: 40px;
+        }
+        .careers-section,
+        footer {
+          padding-left: 32px;
+          padding-right: 32px;
+        }
+        .footer-grid {
+          grid-template-columns: 1fr;
+          gap: 40px;
+        }
+        .footer-bottom {
+          flex-direction: column;
+          gap: 16px;
+          text-align: center;
+        }
+      }
     </style>
-</head>
-<body>
-  <nav class="navbar" id="navbar">
-    <div class="nav-container">
-        <a href="index.html" class="logo">OpalX</a>
+  </head>
+  <body>
+    <nav class="navbar" id="navbar">
+      <div class="nav-container">
+        <a href="index.html" class="logo">
+          <img src="images/Logo.jpeg" alt="OpalX Logo" />
+        </a>
         <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="our-work.html">Projects</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            
-            <li class="nav-socials-item">
-    <a href="https://www.linkedin.com/in/opal-x-0548bb38b/" target="_blank" aria-label="LinkedIn">
-        <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-        </svg>
-    </a>
-    <a href="https://x.com/OpalxAus" target="_blank" aria-label="X">
-        <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/>
-        </svg>
-    </a>
-    <a href="https://www.youtube.com/@opalxaus" target="_blank" aria-label="YouTube">
-        <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814ZM9.545 15.568V8.432L15.818 12l-6.273 3.568Z"/>
-        </svg>
-    </a>
-    <a href="https://www.instagram.com/opalxaus/" target="_blank" aria-label="Instagram">
-        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2C22,19.4 19.4,22 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8C2,4.6 4.6,2 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4A3.6,3.6 0 0,0 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6A3.6,3.6 0 0,0 16.4,4H7.6M17.2,6A1.2,1.2 0 0,1 18.4,7.2A1.2,1.2 0 0,1 17.2,8.4A1.2,1.2 0 0,1 16,7.2A1.2,1.2 0 0,1 17.2,6M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z" />
-        </svg>
-    </a>
-    <a href="https://www.tiktok.com/@opalxaus" target="_blank" aria-label="TikTok">
-       <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-tiktok" viewBox="0 0 16 16">
-  <path d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3z"/>
-</svg>
-    </a>
-</li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="our-work.html">Projects</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+
+          <li class="cta-mobile">
+            <button
+              class="btn-primary"
+              id="mobileCtaButton"
+              data-cal-link="yusuf-ahnzt2/30min"
+              data-cal-namespace="30min"
+              data-cal-config='{"layout":"month_view"}'
+            >
+              Let's Talk
+            </button>
+          </li>
+          <li class="nav-socials-item">
+            <a
+              href="https://www.linkedin.com/in/opal-x-0548bb38b/"
+              target="_blank"
+              aria-label="LinkedIn"
+            >
+              <svg
+                width="18"
+                height="18"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+                />
+              </svg>
+            </a>
+            <a href="https://x.com/OpalxAus" target="_blank" aria-label="X">
+              <svg
+                width="18"
+                height="18"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"
+                />
+              </svg>
+            </a>
+            <a
+              href="https://www.youtube.com/@opalxaus"
+              target="_blank"
+              aria-label="YouTube"
+            >
+              <svg
+                width="22"
+                height="22"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814ZM9.545 15.568V8.432L15.818 12l-6.273 3.568Z"
+                />
+              </svg>
+            </a>
+            <a
+              href="https://www.instagram.com/opalxaus/"
+              target="_blank"
+              aria-label="Instagram"
+            >
+              <svg
+                width="20"
+                height="20"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2C22,19.4 19.4,22 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8C2,4.6 4.6,2 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4A3.6,3.6 0 0,0 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6A3.6,3.6 0 0,0 16.4,4H7.6M17.2,6A1.2,1.2 0 0,1 18.4,7.2A1.2,1.2 0 0,1 17.2,8.4A1.2,1.2 0 0,1 16,7.2A1.2,1.2 0 0,1 17.2,6M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z"
+                />
+              </svg>
+            </a>
+            <a
+              href="https://www.tiktok.com/@opalxaus"
+              target="_blank"
+              aria-label="TikTok"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="18"
+                height="18"
+                fill="currentColor"
+                class="bi bi-tiktok"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3z"
+                />
+              </svg>
+            </a>
+          </li>
         </ul>
-        
-        <button 
-            class="cta-nav" 
-            data-cal-link="yusuf-ahnzt2/30min"
-            data-cal-namespace="30min"
-            data-cal-config='{"layout":"month_view"}'>
-            Let's Talk
+
+        <button
+          class="cta-nav cta-desktop"
+          data-cal-link="yusuf-ahnzt2/30min"
+          data-cal-namespace="30min"
+          data-cal-config='{"layout":"month_view"}'
+        >
+          Let's Talk
         </button>
 
+        <div class="menu-overlay" id="menuOverlay"></div>
+
         <div class="mobile-menu" id="mobileMenu">
-            <span></span>
-            <span></span>
-            <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
-    </div>
-</nav>
+      </div>
+    </nav>
 
     <section class="page-hero">
-        <h1>Join Our Team</h1>
-        <p>We're looking for talented and passionate people to help us build the future of digital. See our open positions below.</p>
+      <h1>Join Our Team</h1>
+      <p>
+        We're looking for talented and passionate people to help us build the
+        future of digital. See our open positions below.
+      </p>
     </section>
 
     <section class="careers-section">
-        <h2>Open Positions</h2>
-        <p>We are not actively hiring for a specific role right now, but we are always interested in hearing from talented individuals. If you believe you'd be a great fit for our team, please send your resume and portfolio to <a href="mailto:hello@opalx.com.au" style="color: var(--primary);">hello@opalx.com.au</a>.</p>
-        
-        </section>
+      <h2>Open Positions</h2>
+      <p>
+        We are not actively hiring for a specific role right now, but we are
+        always interested in hearing from talented individuals. If you believe
+        you'd be a great fit for our team, please send your resume and portfolio
+        to
+        <a href="mailto:hello@opalx.com.au" style="color: var(--primary)"
+          >hello@opalx.com.au</a
+        >.
+      </p>
+    </section>
 
-   <footer>
-    <div class="footer-container">
+    <footer>
+      <div class="footer-container">
         <div class="footer-grid">
-            <div class="footer-col">
-                <a href="index.html" class="logo" style="display: block; margin-bottom: 24px;">OpalX</a>
-                <p>Premium IT solutions and digital transformation services for businesses across Australia & Sri Lanka. Building the future, one project at a time.</p>
-                <div class="social-links">
-                    <a href="https://www.linkedin.com/in/opal-x-0548bb38b/" target="_blank" aria-label="LinkedIn">
-                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-                        </svg>
-                    </a>
-                    <a href="https://x.com/OpalxAus" target="_blank" aria-label="X">
-                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/>
-                        </svg>
-                    </a>
-                    <a href="https://www.youtube.com/@opalxaus" target="_blank" aria-label="YouTube">
-                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814ZM9.545 15.568V8.432L15.818 12l-6.273 3.568Z"/>
-                        </svg>
-                    </a>
-                    <a href="https://www.instagram.com/opalxaus/" target="_blank" aria-label="Instagram">
-                        <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2C22,19.4 19.4,22 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8C2,4.6 4.6,2 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4A3.6,3.6 0 0,0 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6A3.6,3.6 0 0,0 16.4,4H7.6M17.2,6A1.2,1.2 0 0,1 18.4,7.2A1.2,1.2 0 0,1 17.2,8.4A1.2,1.2 0 0,1 16,7.2A1.2,1.2 0 0,1 17.2,6M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z" />
-                        </svg>
-                    </a>
-                    <a href="https://www.tiktok.com/@opalxaus" target="_blank" aria-label="TikTok">
-                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3z"/>
-                        </svg>
-                    </a>
-                </div>
+          <div class="footer-col">
+            <a href="index.html" class="logo">
+              <img src="images/Logo.jpeg" alt="OpalX Logo" />
+            </a>
+            <p>
+              Premium IT solutions and digital transformation services for
+              businesses across Australia & Sri Lanka. Building the future, one
+              project at a time.
+            </p>
+            <div class="social-links">
+              <a
+                href="https://www.linkedin.com/in/opal-x-0548bb38b/"
+                target="_blank"
+                aria-label="LinkedIn"
+              >
+                <svg
+                  width="18"
+                  height="18"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+                  />
+                </svg>
+              </a>
+              <a href="https://x.com/OpalxAus" target="_blank" aria-label="X">
+                <svg
+                  width="18"
+                  height="18"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"
+                  />
+                </svg>
+              </a>
+              <a
+                href="https://www.youtube.com/@opalxaus"
+                target="_blank"
+                aria-label="YouTube"
+              >
+                <svg
+                  width="18"
+                  height="18"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814ZM9.545 15.568V8.432L15.818 12l-6.273 3.568Z"
+                  />
+                </svg>
+              </a>
+              <a
+                href="https://www.instagram.com/opalxaus/"
+                target="_blank"
+                aria-label="Instagram"
+              >
+                <svg
+                  width="18"
+                  height="18"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2C22,19.4 19.4,22 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8C2,4.6 4.6,2 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4A3.6,3.6 0 0,0 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6A3.6,3.6 0 0,0 16.4,4H7.6M17.2,6A1.2,1.2 0 0,1 18.4,7.2A1.2,1.2 0 0,1 17.2,8.4A1.2,1.2 0 0,1 16,7.2A1.2,1.2 0 0,1 17.2,6M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z"
+                  />
+                </svg>
+              </a>
+              <a
+                href="https://www.tiktok.com/@opalxaus"
+                target="_blank"
+                aria-label="TikTok"
+              >
+                <svg
+                  width="20"
+                  height="20"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3z"
+                  />
+                </svg>
+              </a>
             </div>
-            <div class="footer-col">
-                <h4>Services</h4>
-                <ul>
-                    <li><a href="services.html">Web Development</a></li>
-                    <li><a href="services.html">Custom Software</a></li>
-                    <li><a href="services.html">Cloud Solutions</a></li>
-                    <li><a href="services.html">Mobile Apps</a></li>
-                    <li><a href="services.html">E-Commerce</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Company</h4>
-                <ul>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="our-work.html">Our Work</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="careers.html">Careers</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Contact</h4>
-                <ul style="line-height: 1.8;">
-                    <li><a href="tel:+04 044 71816">+04 044 71816</a></li>
-                    <li><a href="mailto:opalxaus@gmail.com">opalxaus@gmail.com</a></li>
-                    <li style="margin-top: 12px; color: var(--gray-600);">
-                        <b>Sydney:</b><br>
-                        47 Queen Street, Campbelltown, 2560, NSW
-                    </li>
-                    <li style="margin-top: 12px; color: var(--gray-600);">
-                        <b>Sri Lanka:</b><br>
-                        55B Ananda Coomaraswamy Mawatha, Colombo 03
-                    </li>
-                </ul>
-            </div>
+          </div>
+          <div class="footer-col">
+            <h4>Services</h4>
+            <ul>
+              <li><a href="services.html">Web Development</a></li>
+              <li><a href="services.html">Custom Software</a></li>
+              <li><a href="services.html">Cloud Solutions</a></li>
+              <li><a href="services.html">Mobile Apps</a></li>
+              <li><a href="services.html">E-Commerce</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="our-work.html">Our Work</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="careers.html">Careers</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Contact</h4>
+            <ul style="line-height: 1.8">
+              <li><a href="tel:+04 044 71816">+04 044 71816</a></li>
+              <li>
+                <a href="mailto:opalxaus@gmail.com">opalxaus@gmail.com</a>
+              </li>
+              <li style="margin-top: 12px; color: var(--gray-600)">
+                <b>Sydney:</b><br />
+                47 Queen Street, Campbelltown, 2560, NSW
+              </li>
+              <li style="margin-top: 12px; color: var(--gray-600)">
+                <b>Sri Lanka:</b><br />
+                55B Ananda Coomaraswamy Mawatha, Colombo 03
+              </li>
+            </ul>
+          </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2024 OpalX. All rights reserved.</p>
-            <div class="footer-links">
-                <a href="privacy.html">Privacy Policy</a>
-                <a href="terms.html">Terms of Service</a>
-            </div>
+          <p>&copy; 2024 OpalX. All rights reserved.</p>
+          <div class="footer-links">
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Service</a>
+          </div>
         </div>
-    </div>
-</footer>
+      </div>
+    </footer>
 
     <script>
-        // Navigation scroll effect
-        window.addEventListener('scroll', () => {
-            const navbar = document.getElementById('navbar');
-            if (window.scrollY > 50) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
+      // ==========================================
+      // NAVIGATION & MENU
+      // ==========================================
+      const navbar = document.getElementById("navbar");
+      const mobileMenuButton = document.getElementById("mobileMenu");
+      const navLinks = document.querySelector(".nav-links");
+      const menuOverlay = document.getElementById("menuOverlay");
+
+      // Navbar scroll effect
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 50) {
+          navbar.classList.add("scrolled");
+        } else {
+          navbar.classList.remove("scrolled");
+        }
+      });
+
+      // Mobile menu toggle
+      if (mobileMenuButton && navLinks && menuOverlay) {
+        mobileMenuButton.addEventListener("click", () => {
+          navLinks.classList.toggle("active");
+          mobileMenuButton.classList.toggle("active");
+          menuOverlay.classList.toggle("active");
         });
+      }
+
+      // Close menu when mobile CTA is clicked
+      const mobileCtaButton = document.getElementById("mobileCtaButton");
+      if (mobileCtaButton) {
+        mobileCtaButton.addEventListener("click", () => {
+          // Manually close the menu
+          navLinks.classList.remove("active");
+          mobileMenuButton.classList.remove("active");
+          menuOverlay.classList.remove("active");
+
+          // The cal.com script will automatically handle opening the modal
+        });
+      }
+
+      // ==========================================
+      // SMOOTH SCROLL (Good to keep on all pages)
+      // ==========================================
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          const href = this.getAttribute("href");
+          if (href !== "#" && href !== "") {
+            e.preventDefault();
+            const target = document.querySelector(href);
+            if (target) {
+              window.scrollTo({
+                top: target.offsetTop - 80, // Offset for fixed navbar
+                behavior: "smooth",
+              });
+            }
+          }
+        });
+      });
     </script>
-</body>
+  </body>
 </html>
